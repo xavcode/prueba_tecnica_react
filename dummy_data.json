@@ -1,0 +1,304 @@
+{
+  "products": [
+    {
+      "sku": "ELEC-001",
+      "name": "Samsung TV 55\"",
+      "price": 599.99,
+      "description": "Samsung 55\" 4K Ultra HD Smart LED TV",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/01_tv55.webp",
+      "category": "Electronics",
+      "score": 4.7
+    },
+    {
+      "sku": "HOG-002",
+      "name": "Dyson Cleaner",
+      "price": 699.99,
+      "description": "Dyson V11 Cordless Vacuum Cleaner with LCD Screen",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/02_dyson.webp",
+      "category": "Home",
+      "score": 4.5
+    },
+    {
+      "sku": "ELEC-003",
+      "name": "Sony PlayStation 5",
+      "price": 499.99,
+      "description": "Sony PlayStation 5 Console with DualSense Controller",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/03_ps5.webp",
+      "category": "Electronics",
+      "score": 4.8
+    },
+    {
+      "sku": "MODA-004",
+      "name": "Nike Air Max 270",
+      "price": 149.99,
+      "description": "Nike Air Max 270 Men’s Running Shoes",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/04_joirda_air_max_270.webp",
+      "category": "Fashion",
+      "score": 4.3
+    },
+    {
+      "sku": "ELEC-005",
+      "name": "iPad Pro 11\"",
+      "price": 799.99,
+      "description": "Apple iPad Pro 11\" with M1 Chip",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/05_ipad_11_pro.png",
+      "category": "Electronics",
+      "score": 4.9
+    },
+    {
+      "sku": "DEPO-006",
+      "name": "Wilson Football",
+      "price": 29.99,
+      "description": "Wilson NFL Official Game Football",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/06_wilson_nfl_football.webp",
+      "category": "Sports",
+      "score": 4.2
+    },
+    {
+      "sku": "HOG-007",
+      "name": "Instant Pot",
+      "price": 89.99,
+      "description": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/07_instant_pot_duo.jpg",
+      "category": "Home",
+      "score": 4.4
+    },
+    {
+      "sku": "ELEC-008",
+      "name": "Bose QuietComfort",
+      "price": 299.99,
+      "description": "Bose QuietComfort 35 II Wireless Bluetooth Headphones",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/08_bose_quiet_comfort_35.jpeg",
+      "category": "Electronics",
+      "score": 4.6
+    },
+    {
+      "sku": "MODA-009",
+      "name": "Levi's 501 Jeans",
+      "price": 89.99,
+      "description": "Levi's 501 Original Fit Men's Jeans",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/09_levis_501_jeans.jpg",
+      "category": "Fashion",
+      "score": 4.1
+    },
+    {
+      "sku": "HOG-010",
+      "name": "Cuisinart Coffee Maker",
+      "price": 59.99,
+      "description": "Cuisinart 12-Cup Programmable Coffee Maker",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/010_cuisinart_coffee.jpg",
+      "category": "Home",
+      "score": 4.0
+    },
+    {
+      "sku": "ELEC-011",
+      "name": "Canon EOS Rebel T7",
+      "price": 449.99,
+      "description": "Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/011_canon_eos_rebel.jpg",
+      "category": "Electronics",
+      "score": 4.5
+    },
+    {
+      "sku": "MODA-012",
+      "name": "Adidas Ultraboost 21",
+      "price": 179.99,
+      "description": "Adidas Ultraboost 21 Running Shoes",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/012_adidas_ultraboost.jpg",
+      "category": "Fashion",
+      "score": 4.7
+    },
+    {
+      "sku": "DEPO-013",
+      "name": "Adidas Soccer Ball",
+      "price": 24.99,
+      "description": "Adidas Tango Rosario Soccer Ball",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/013_adidas_soccer_ball.jpeg",
+      "category": "Sports",
+      "score": 4.1
+    },
+    {
+      "sku": "ELEC-014",
+      "name": "Samsung Galaxy S21",
+      "price": 799.99,
+      "description": "Samsung Galaxy S21 5G Smartphone",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/014_samsung_galaxy_s21.jpeg",
+      "category": "Electronics",
+      "score": 4.4
+    },
+    {
+      "sku": "HOG-015",
+      "name": "Ninja Professional Blender",
+      "price": 129.99,
+      "description": "Ninja Professional Countertop Blender with 1,000-Watt Base",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/015_ninja_blender.webp",
+      "category": "Home",
+      "score": 4.3
+    },
+    {
+      "sku": "MODA-016",
+      "name": "Ray-Ban Sunglasses",
+      "price": 149.99,
+      "description": "Ray-Ban RB3025 Aviator Sunglasses",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/016_rayban_aviator_sunglases.jpeg",
+      "category": "Fashion",
+      "score": 4.2
+    },
+    {
+      "sku": "ELEC-017",
+      "name": "Apple AirPods Pro",
+      "price": 249.99,
+      "description": "Apple AirPods Pro with Active Noise Cancellation",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/017_apple_airpods_pro.png",
+      "category": "Electronics",
+      "score": 4.8
+    },
+    {
+      "sku": "DEPO-018",
+      "name": "Nike Training Shoes",
+      "price": 119.99,
+      "description": "Nike Men's Training Shoes with Flyknit Upper",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/018_nike_training_shoes.jpeg",
+      "category": "Sports",
+      "score": 4.6
+    },
+    {
+      "sku": "HOG-019",
+      "name": "KitchenAid Mixer",
+      "price": 379.99,
+      "description": "KitchenAid Artisan Stand Mixer with 5-Qt. Bowl",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/019_kitchen_aid_stand_mixer.jpeg",
+      "category": "Home",
+      "score": 4.5
+    },
+    {
+      "sku": "ELEC-020",
+      "name": "LG 4K UHD Monitor",
+      "price": 299.99,
+      "description": "LG 27\" 4K UHD IPS Monitor",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/020_lg_4k_monitor_27.jpg",
+      "category": "Electronics",
+      "score": 4.3
+    },
+    {
+      "sku": "MODA-021",
+      "name": "Calvin Klein Jacket",
+      "price": 249.99,
+      "description": "Calvin Klein Men's Leather Jacket",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/021_calvin_klein_jacket.jpeg",
+      "category": "Fashion",
+      "score": 4.0
+    },
+    {
+      "sku": "DEPO-022",
+      "name": "Wilson Tennis Racket",
+      "price": 149.99,
+      "description": "Wilson Pro Staff Tennis Racket",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/022_wilson_tennis_racket.jpg",
+      "category": "Sports",
+      "score": 4.4
+    },
+    {
+      "sku": "HOG-023",
+      "name": "Oster Digital Air Fryer",
+      "price": 119.99,
+      "description": "Oster Digital Air Fryer with 3.2-Liter Capacity",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/023_oster_air_fryer.webp",
+      "category": "Home",
+      "score": 4.6
+    },
+    {
+      "sku": "ELEC-024",
+      "name": "Dell XPS 13 Laptop",
+      "price": 1299.99,
+      "description": "Dell XPS 13 9310 Laptop with Intel i7 Processor",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/024_dell_laptop_xps.jpg",
+      "category": "Electronics",
+      "score": 4.4
+    },
+    {
+      "sku": "MODA-025",
+      "name": "Burberry Coat",
+      "price": 1495.99,
+      "description": "Burberry Classic Trench Coat for Women",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/025_burberry_trench_coat.webp",
+      "category": "Fashion",
+      "score": 4.6
+    },
+    {
+      "sku": "HOG-026",
+      "name": "Crock-Pot Cooker",
+      "price": 79.99,
+      "description": "Crock-Pot 6-Quart Programmable Slow Cooker",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/026_crock_pot.jpeg",
+      "category": "Home",
+      "score": 4.2
+    },
+    {
+      "sku": "ELEC-027",
+      "name": "Sony WH-1000XM4",
+      "price": 349.99,
+      "description": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/027_sony_wh_100x_headphones.webp",
+      "category": "Electronics",
+      "score": 4.7
+    },
+    {
+      "sku": "DEPO-028",
+      "name": "Fitbit Charge 5",
+      "price": 149.99,
+      "description": "Fitbit Charge 5 Advanced Fitness and Health Tracker",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/028_fitbit.webp",
+      "category": "Sports",
+      "score": 4.4
+    },
+    {
+      "sku": "MODA-029",
+      "name": "Gucci Bag",
+      "price": 1500.00,
+      "description": "Gucci GG Marmont Matelassé Leather Bag",
+      "inStock": true,
+      "imageUrl": "/assets/images/products/029_gucci_gg_bag.jpeg",
+      "category": "Fashion",
+      "score": 4.8
+    },
+    {
+      "sku": "ELEC-030",
+      "name": "Asus ROG Strix Gaming Monitor",
+      "price": 499.99,
+      "description": "Asus ROG Strix 27\" Gaming Monitor with 144Hz Refresh Rate",
+      "inStock": false,
+      "imageUrl": "/assets/images/products/030_asus_rog_monitor_27.jpg",
+      "category": "Electronics",
+      "score": 4.5
+    }
+  ]
+}
