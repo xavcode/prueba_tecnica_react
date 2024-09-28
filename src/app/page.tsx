@@ -1,7 +1,9 @@
+import GridCards from "@/components/grid-cards"
+
 function HomePage() {
   return (
     <div>
-      <h1>home page</h1>
+      <GridCards/>
     </div>
   )
 }
