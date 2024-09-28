@@ -44,8 +44,10 @@ function CardItem(product: Product) {
         </div>
         <div className='flex justify-between'>
           <CardTitle className='text-lg font-bold'>{price}</CardTitle>
-          <Badge className={
-            clsx({
+          <Badge variant={'outline'} className={
+            clsx(
+              'hover:disabled',
+              {
               "bg-teal-800": category==='Fashion',
               "bg-pink-800": category==='Home',
               "bg-cyan-800": category==='Electronics',
