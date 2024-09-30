@@ -5,7 +5,6 @@ import { Product } from "@/app/types/type-products"
 import CardItem from "./card-item"
 import { useProductsStore } from "@/app/store/products_store"
 
-
 function GridCards() {
   const { filteredProducts, fetchProducts } = useProductsStore()
 
