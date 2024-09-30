@@ -1,11 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -14,14 +12,19 @@ import { Button } from './ui/button'
 import { Badge } from "@/components/ui/badge"
 import clsx from 'clsx'
 import { useRouter } from "next/navigation";
+import { useProductsStore } from '@/app/store/products_store'
+
 
 function CardItem(product: any) {
-  
+
   const router = useRouter();
-  const { name, sku, description, price, inStock, category, imageUrl, comments, score } = product
+  const { addItemToCart } = useProductsStore()
+  const { name, sku, description, price, inStock, category, score } = product
+
   const handleDetail = (sku: string): any => {
     router.push(`/products/${sku}`);
   };
+
 
   return (
     <Card className='max-w-xs w-full h-[450px] overflow-hidden truncat hover:brightness-110 transition-all bg-zinc-200/40 dark:bg-slate-700/30'>
@@ -36,12 +39,12 @@ function CardItem(product: any) {
             src={product.imageUrl}
             alt={`picture ${name}`}
             fill={true}
-            onClick={()=>handleDetail(product.sku)}
+            onClick={() => handleDetail(product.sku)}
           />
-          <p className='absolute top-1 right-1 p-1 rounded text-xs uppercase'>
+          <p className='absolute top-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs uppercase'>
             sku: {sku}
           </p>
-          <p className='absolute bottom-4 right-2 px-2 py-1 rounded text-xs'>
+          <p className='absolute bottom-4 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs'>
             ⭐ {score}
           </p>
         </div>
@@ -65,6 +68,7 @@ function CardItem(product: any) {
         </p>
         <div className='flex justify-center mt-6'>
           <Button
+            onClick={() => addItemToCart(product)}
             disabled={!inStock}
           >Add to cart</Button>
         </div>

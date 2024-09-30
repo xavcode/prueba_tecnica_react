@@ -2,11 +2,21 @@
 import { ThemeButton } from "./theme-button"
 import React from 'react'
 import useProducFilters from '../hooks/useProductFilters'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
+import Cart from "./cart"
 
 import { ShoppingCart } from 'lucide-react'
+import { Label } from "@radix-ui/react-dropdown-menu"
+import { Input } from "postcss"
+import { Button } from "./ui/button"
 
-function Header() {  
-  const {priceRange,
+function Header() {
+  const { priceRange,
     max_price,
     handle_sort_order,
     handle_show_available,
@@ -15,12 +25,16 @@ function Header() {
     cartItems,
     category,
     sortedOrder,
-    categories} = useProducFilters()
-  
+    categories } = useProducFilters()
   return (
-    <header className="sticky top-0 flex justify-between w-screen h-auto bg-slate-800 text-white p-2 shadow-lg  z-10 mb-4">
+    <header className="sticky top-0 flex justify-between w-screen h-auto bg-slate-800 text-white px-3 shadow-lg py-2 z-10 mb-4">
       <div className="flex flex-col w-full items-center">
-        <img src="/assets/images/logo.png" alt="logo" className="h-10 w-48  mb-4" />
+        <div className="flex items-center gap-3">
+          <img src="/assets/images/logo.png" alt="logo" className="h-10 w-48  mb-4" />         
+          <div className=" hover:cursor-pointer">
+            <Cart/>
+          </div>
+        </div>
 
         <div className="flex flex-wrap justify-center w-full items-center gap-8">
           <div className="flex items-center">
@@ -78,20 +92,10 @@ function Header() {
             />
             <label htmlFor="available" className="ml-2 text-sm">Show only available</label>
           </div>
-
-          <div className=" fixed right-6 bottom-10 md:block hover:cursor-pointer">
-            <button className="relative  text-white hover:text-green-200 transition-colors" >
-              <ShoppingCart size={32} />
-              <span className="absolute -top-2 -right-2 bg-green-600 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {cartItems.length}
-              </span>
-            </button>
-          </div>
-
         </div>
       </div>
       <ThemeButton />
     </header>
-  ) 
+  )
 }
 export default Header
