@@ -13,23 +13,15 @@ import { Button } from './ui/button'
 import { Badge } from "@/components/ui/badge"
 import clsx from 'clsx'
 
-
-// interface CardProps {
-//   product: Product;
-//   cartItem: CartItem[];
-// }
-
 function CardItem(product: Product) {
   const { name, sku, description, price, inStock, category, imageUrl, comments, score } = product
   return (
-    <Card className='max-w-72 h-[450px] overflow-hidden truncat hover:scale-[1.015] transition-all bg-zinc-200/40 dark:bg-slate-700/30'>
+    <Card className='max-w-xs w-full h-[450px] overflow-hidden truncat hover:scale-[1.015] transition-all bg-zinc-200/40 dark:bg-slate-700/30'>
       <CardHeader >
         <CardTitle className='text-center'>{name}</CardTitle>
       </CardHeader>
       <CardContent>
         <div className='relative flex justify-center items-center cursor-pointer'>
-          {/* <Badge className='absolute top-1 right-1' > {sku}</Badge>
-        <Badge className='absolute bottom-4 right-2' variant={'secondary'}>{score}</Badge> */}
           <img
             className='w-full h-48 object-cover mb-2 rounded'
             src={imageUrl}
