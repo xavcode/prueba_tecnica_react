@@ -10,7 +10,6 @@ import { Product } from '@/app/types/type-products';
 const Cart = () => {
   const { cartItems, removeItemFromCart } = useProductsStore() 
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
-  console.log(cartItems)
 
   return (
     <Popover>

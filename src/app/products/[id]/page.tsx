@@ -4,12 +4,12 @@ import { useParams } from 'next/navigation'
 import { useProductsStore } from '@/app/store/products_store'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import clsx from 'clsx'
-import Image from 'next/image'
 import { Badge } from "@/components/ui/badge"
+import { Product,CartItem } from '@/app/types/type-products'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
-import { Product } from '@/app/types/type-products'
+import Image from 'next/image'
+import clsx from 'clsx'
 
 const productReviews = [
   {
@@ -44,7 +44,7 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = () => {
   const { id } = useParams()
-  const { products } = useProductsStore()
+  const { products, addItemToCart } = useProductsStore()
   const product = products.find(pro => pro.sku === id);
 
   if (!product) return
@@ -89,6 +89,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
           </p>
           <div className='flex justify-center relative mt-4'>
             <Button
+              // onClick={()=>addItemToCart()}
               disabled={!product.inStock}
             >Add to cart</Button>
           </div>
@@ -104,8 +105,8 @@ const ProductPage: React.FC<ProductPageProps> = () => {
           <CardTitle className='text-center text-2xl '>Comments</CardTitle>
         </CardHeader>
         {productReviews.map((review) => (
-          <CardContent >
-            <div className='flex items-center gap-3 hover:cursor-pointer '>
+          <CardContent key={review.user}>
+            <div  className='flex items-center gap-3 hover:cursor-pointer '>
               <Avatar>
                 <AvatarImage src="https://randomuser.me/api/portraits/med/men/74.jpg" />
                 <AvatarFallback>CN</AvatarFallback>

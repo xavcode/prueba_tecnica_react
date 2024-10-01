@@ -13,13 +13,14 @@ import { Badge } from "@/components/ui/badge"
 import clsx from 'clsx'
 import { useRouter } from "next/navigation";
 import { useProductsStore } from '@/app/store/products_store'
+import { Product, CartItem } from '@/app/types/type-products'
 
 
-function CardItem(product: any) {
+function CardItem(cartItem: CartItem) {
 
   const router = useRouter();
   const { addItemToCart } = useProductsStore()
-  const { name, sku, description, price, inStock, category, score } = product
+  const { name, sku, description, price, inStock, category, score } = cartItem
 
   const handleDetail = (sku: string): any => {
     router.push(`/products/${sku}`);
@@ -36,10 +37,10 @@ function CardItem(product: any) {
         >
           <Image
             className='object-cover mb-2 rounded cursor-pointer hover:scale-[1.015] transition-all'
-            src={product.imageUrl}
+            src={cartItem.imageUrl}
             alt={`picture ${name}`}
             fill={true}
-            onClick={() => handleDetail(product.sku)}
+            onClick={() => handleDetail(cartItem.sku)}
           />
           <p className='absolute top-1 right-1 bg-black bg-opacity-50 text-white p-1 rounded text-xs uppercase'>
             sku: {sku}
@@ -63,12 +64,12 @@ function CardItem(product: any) {
           >{category}</Badge>
         </div>
         <CardDescription className='my-1 truncate'>{description}</CardDescription>
-        <p className={`text-sm font-bold ${product.inStock ? 'text-green-400' : 'text-red-400'}`}>
-          {product.inStock ? 'Available' : 'Unavailable'}
+        <p className={`text-sm font-bold ${cartItem.inStock ? 'text-green-400' : 'text-red-400'}`}>
+          {cartItem.inStock ? 'Available' : 'Unavailable'}
         </p>
         <div className='flex justify-center mt-6'>
           <Button
-            onClick={() => addItemToCart(product)}
+            onClick={() => addItemToCart(cartItem,)}
             disabled={!inStock}
           >Add to cart</Button>
         </div>
