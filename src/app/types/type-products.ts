@@ -10,5 +10,5 @@ export interface Product {
     comments? : string;
 }
 export interface CartItem extends Product{
-    quantity: number;
+    quantity?: number;
 }

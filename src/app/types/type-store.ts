@@ -9,6 +9,7 @@ export interface Store {
   addItemToCart: (item: CartItem) => void;
   removeItemFromCart: (productId: string) => void;  
   updateFilters: (filters: any) => void;
+  clearCart: ()=>void;
   
   filters: {
     showOnlyAvailable: boolean,

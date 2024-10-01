@@ -8,7 +8,7 @@ import { useProductsStore } from '@/app/store/products_store';
 import { Product } from '@/app/types/type-products';
 
 const Cart = () => {
-  const { cartItems, removeItemFromCart } = useProductsStore() 
+  const { cartItems, removeItemFromCart, clearCart } = useProductsStore() 
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
@@ -37,7 +37,7 @@ const Cart = () => {
             <span>Total:</span>
             <span>${total.toFixed(2)}</span>
           </div>
-          <Button className="w-full">Ir al Checkout</Button>
+          <Button onClick={()=>clearCart()} className="w-full">Ir al Checkout</Button>
         </div>
       </PopoverContent>
     </Popover>
