@@ -39,7 +39,7 @@ export const useProductsStore = create<Store>((set) => ({
       return {
         cartItems: state.cartItems.map(cartItem =>
           cartItem.sku === item.sku
-            ? { ...cartItem, quantity: (cartItem.quantity ?? 0) + 1 } 
+            ? { ...cartItem, quantity: (cartItem.quantity ?? 0) + 1, } 
             : cartItem
         )
       };
@@ -48,6 +48,7 @@ export const useProductsStore = create<Store>((set) => ({
         cartItems: [...state.cartItems, { ...item, quantity: 1 }]
       };
     }
+    
   }),
   
   clearCart: () => {

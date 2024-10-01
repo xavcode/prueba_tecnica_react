@@ -14,10 +14,10 @@ import clsx from 'clsx'
 import { useRouter } from "next/navigation";
 import { useProductsStore } from '@/app/store/products_store'
 import { Product, CartItem } from '@/app/types/type-products'
-
+import { useToast } from '@/hooks/use-toast';
 
 function CardItem(cartItem: CartItem) {
-
+  const {toast} = useToast()
   const router = useRouter();
   const { addItemToCart } = useProductsStore()
   const { name, sku, description, price, inStock, category, score } = cartItem
@@ -25,6 +25,10 @@ function CardItem(cartItem: CartItem) {
   const handleDetail = (sku: string): any => {
     router.push(`/products/${sku}`);
   };
+  const handleAddCardItem=(item:CartItem)=>{
+    addItemToCart(item)
+    toast({description:`Product ${item.name} is now in your cart!`})
+  }
 
 
   return (
@@ -69,7 +73,7 @@ function CardItem(cartItem: CartItem) {
         </p>
         <div className='flex justify-center mt-6'>
           <Button
-            onClick={() => addItemToCart(cartItem,)}
+            onClick={() => handleAddCardItem(cartItem)}
             disabled={!inStock}
           >Add to cart</Button>
         </div>

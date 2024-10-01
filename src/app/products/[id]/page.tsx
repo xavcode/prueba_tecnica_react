@@ -10,6 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { useToast } from '@/hooks/use-toast'
 
 const productReviews = [
   {
@@ -43,9 +44,17 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = () => {
+  const {toast} = useToast()
   const { id } = useParams()
   const { products, addItemToCart } = useProductsStore()
   const product = products.find(pro => pro.sku === id);
+  if(!product) return
+
+
+  const handleAddCardItem=(item:CartItem)=>{
+    addItemToCart(product)
+    toast({description:`Product ${item.name} is now in your cart!`})
+  }
 
   if (!product) return
   return (
@@ -89,7 +98,7 @@ const ProductPage: React.FC<ProductPageProps> = () => {
           </p>
           <div className='flex justify-center relative mt-4'>
             <Button
-              // onClick={()=>addItemToCart()}
+              onClick={()=>handleAddCardItem(product)}
               disabled={!product.inStock}
             >Add to cart</Button>
           </div>
